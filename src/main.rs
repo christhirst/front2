@@ -7,8 +7,10 @@ fn main() {
 
 pub fn App() -> Element {
     use_context_provider(|| Signal::new(PreviewState::Unset));
-
+    let title = "title";
     rsx! {
+        div { "ww" }
+        div { padding: "0.5rem", position: "relative", "{title}" }
         div { display: "flex", flex_direction: "row", width: "100%",
             div { width: "50%", Stories {} }
             div { width: "50%", Preview {} }
